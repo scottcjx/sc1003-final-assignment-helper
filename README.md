@@ -55,7 +55,8 @@ This function should add a new book into the database
 
 ```
 Note:
-The is a requirement that the books are sorted by bookId within the database. Here are some ways in approaching this.
+The is a requirement that the books are sorted by bookId within the database. 
+Here are some ways in approaching this.
 
 1. post processing:
 -> add/remove book 
@@ -68,7 +69,8 @@ The is a requirement that the books are sorted by bookId within the database. He
 -> -> add book to pos.
 -> (for remove:) 
 -> -> shift the pointers of the books after target by -1 pos
--> -> populate last position of database with empty book (optional if there is a seperate counter for number of books)
+-> -> populate last position of database with empty book 
+    (optional if there is a seperate counter for number of books)
 ```
 
 ### `removeBook()`
