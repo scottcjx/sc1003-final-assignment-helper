@@ -4,11 +4,11 @@
 
 PS. I like kopi peng. I accept googlepay, paynow, [paylah](./rsc/plspaylahme.jpg)
 
-- @ [scottcjx.w@gmail.com](mailto:scottcjx.w@gmail.com)
+- @ [biz@carou](https://www.carousell.sg/p/programming-coding-help-consultation-1196819850/)
+- @ [email: scottcjx.w@gmail.com](mailto:scottcjx.w@gmail.com)
 - @ [tele: scottcjx](t.me/scjxw)
 
-
-This assignment is programmed wholly in C, here are some functions that need to be implemented.
+This assignment is programmed wholly in C, here are some functions that need to be implemented. 
 
 ## Required Functions
 These functions are set as requirements for this assignment.
