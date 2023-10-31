@@ -1,5 +1,12 @@
 # sc1003-final-assignment-helper
-i cant give you the answers, but at least i can drop some hints
+
+`With compliments, Scott CJX`
+
+PS. I like kopi peng. I accept googlepay, paynow, [paylah](./rsc/plspaylahme.jpg)
+
+- @ [scottcjx.w@gmail.com](mailto:scottcjx.w@gmail.com)
+- @ [tele: scottcjx](t.me/scjxw)
+
 
 This assignment is programmed wholly in C, here are some functions that need to be implemented.
 
@@ -107,3 +114,11 @@ This function should find a book in the database and inform the useer if the boo
 This function should use the following helper functions 
 1. `func: case-insensitive string comparison` in `func: search book from database` to compare book information case-insensitively.
 2. `func: search book from database` to search for the target book
+
+
+## License
+This project is available under the GPL v3 license. See the [LICENSE](./LICENSE) file for more info.
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) 
+
+
