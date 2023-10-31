@@ -101,7 +101,8 @@ This function should update a book in database (if exists) according to book inf
 Note:
 to update a book in database, here are some ways:
 1. directly modify values on book in database (easiest)
-2. use a buffer/temporary book, input all updated values + original values (unchanged) -> replace book in database. 
+2. use a buffer/temporary book, input all updated values 
+    + original values (unchanged) -> replace book in database. 
 ```
 
 ### `findBook()`
