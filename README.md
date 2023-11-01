@@ -41,7 +41,7 @@ These functions are of MY own, that i used in my assignment. you ought to create
 This function should list out all the books currently in the bookshop
 
 1. print "listBooks():"
-2. print "The bookshop is empty" if no books in database
+2. print "The bookshop is empty" if no books in database, exit function
 3. print book contents for each book in database
 
 ### `addBook()`
@@ -80,10 +80,11 @@ This function should remove a book in database (if exists) according to book inf
 1. print "removeBook():"
 2. get user inputs for title & author
 3. search for and get the book from database.
-4. print "The bookshop is empty" if database empty
-5. print "The target book is not in the bookshop" if book not in database
+4. print "The bookshop is empty" if database empty, exit function
+5. print "The target book is not in the bookshop" if book not in database, exit function
 6. remove book from database *
-7. The target book is removed
+7. print "The target book is removed"
+8. print removed_book contents (remember to save a copy in buffer before deleting)
 
 \*`Note: refer to `[`addBooks note`](#addbook)
 
@@ -94,9 +95,10 @@ This function should update a book in database (if exists) according to book inf
 1. print "updateBook()"
 2. get user inputs for title & author
 3. search for and get the book from database.
-4. print "The target book is not in the bookshop" if book not in database
+4. print "The target book is not in the bookshop" if book not in database, exit function
 5. get user inputs for "updated" price & quantity
 6. update book in database
+7. print updated_book contents
 
 ```
 Note:
@@ -119,10 +121,38 @@ This function should use the following helper functions
 1. `func: case-insensitive string comparison` in `func: search book from database` to compare book information case-insensitively.
 2. `func: search book from database` to search for the target book
 
+## Some useful methods and algorithms
+- [malloc](https://en.cppreference.com/w/c/memory/malloc) - a useful in-built C function to allocate a block of memory to a pointer.
+    - -> example: `(Book*) pBooks = malloc(sizeof(Book) * arrSize);`
+- [memcpy](https://cplusplus.com/reference/cstring/memcpy/) - a useful in-built C function to copy a block of memory (ie. Book struct).
+    - -> example: `memcpy(&targetBook, &fromBook, sizeof(Book));`
+- [toupper](https://cplusplus.com/reference/cctype/toupper/) - a useful <ctype.h> C function to convert a char to a uppercase char.
+    - -> example `(char) uCase = toupper(chr);`
+- [strlen](https://cplusplus.com/reference/cstring/strlen/) - a useful <string.h> C function to get the length of a string (char*)
+    - -> example: `int len = strlen(str);`
+
+### case-insensitive string comparison
+`int func(char* str1, char* str2)`
+1. check if the 2 strings have the same length with `strlen`.
+2. if 2 strings have different lengths, exit function [false].
+3. for each char in string, convert to upper and compare if equal.
+4. if any char not equal, exit function [false]
+5. 2 strings are equal [true]
+
+``` c
+int func(char* str1, char* str2)
+{
+    if (strlen(str1) != strlen(str2)) return 0;
+    for (int i = 0; i < strlen(str1); i++)
+    {
+        if (toupper(str1[i]) != toupper(str2[i])) return 0;
+    }
+    return 1;
+}
+```
+
 
 ## License
 This project is available under the GPL v3 license. See the [LICENSE](./LICENSE.md) file for more info.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) 
-
-
